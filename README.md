@@ -1,7 +1,7 @@
 
 # DSC180 - Models for Creditworthiness 
 
-Machine Learning for credit score calculation. 
+Machine Learning for credit score calculation. Python 3.9.5
 
 ## Description
 
