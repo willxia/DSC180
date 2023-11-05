@@ -18,16 +18,11 @@ Before you can run the project, you need to install the necessary Python package
 - `transformers`: A library by Hugging Face offering state-of-the-art general-purpose architectures for Natural Language Processing (NLP).
 - `scikit-learn`: A simple and efficient tools for predictive data analysis.
 
-To install these packages, you can use `pip`, which is the package installer for Python. Simply run the following commands in your terminal:
+To install these packages, you can use `pip`, which is the package installer for Python. Simply run the following command in your terminal:
 
 ```bash
-# Install numpy, pandas, torch, and nltk
-pip install *numpy
-* can be pandas /torch/ nltk
-
-# Install transformers and scikit-learn
-pip install transformers
-pip install scikit-learn
+# Install required packages
+pip install -r requirements.txt
 ```
 Check if Python 3.9.5 is installed:
 
