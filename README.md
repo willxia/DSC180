@@ -75,7 +75,7 @@ To begin working with this project, you'll need to set up your environment and o
 3. Using the Fine-tuned Model for Inference
    - In case you want to skip the training phase and use the model that has already been fine-tuned, locate the section of the notebook labeled 'Inference'.
 
-Begin execution from this point to use the model for making predictions or analyzing new data.
+### Begin execution from this point to use the model for making predictions or analyzing new data.
 
 4. Important Note on Saving the Model
    - Be cautious not to run the command that saves the model more than once, as this will overwrite the previously saved model. If you've made significant changes and wish to save those, ensure you back up the original model or save the new one under a different name.
