@@ -28,6 +28,6 @@ pip install *numpy
 # Install transformers and scikit-learn
 pip install transformers
 pip install scikit-learn
-
+```bash
 
 ## Installation
