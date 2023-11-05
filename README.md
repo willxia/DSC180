@@ -1,7 +1,7 @@
 
 # DSC180 - Models for Creditworthiness 
 
-Machine Learning for credit score calculation. 
+Machine Learning for credit score calculation. Python Version 3.9.5
 
 ## Description
 
@@ -29,6 +29,13 @@ pip install *numpy
 pip install transformers
 pip install scikit-learn
 ```
+Check if Python 3.9.5 is installed:
+
+Open a terminal and run:
+
+'''bash
+python3.9 --version
+'''
 
 ## Instruction
 
