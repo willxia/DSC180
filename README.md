@@ -33,9 +33,9 @@ Check if Python 3.9.5 is installed:
 
 Open a terminal and run:
 
-'''bash
+```bash
 python3.9 --version
-'''
+```
 
 ## Instruction
 
