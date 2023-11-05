@@ -9,12 +9,26 @@ In the complex landscape of financial services, creditworthiness is vital for ma
 
 ## Installation
 
+Before you can run the project, you need to install the necessary Python packages. This project depends on several third-party libraries, which are listed below:
+
+- `numpy`: A fundamental package for scientific computing with Python.
+- `pandas`: An open-source data analysis and manipulation tool.
+- `torch`: An open-source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing.
+- `nltk`: A leading platform for building Python programs to work with human language data (Natural Language Toolkit).
+- `transformers`: A library by Hugging Face offering state-of-the-art general-purpose architectures for Natural Language Processing (NLP).
+- `scikit-learn`: A simple and efficient tools for predictive data analysis.
+
+To install these packages, you can use `pip`, which is the package installer for Python. Simply run the following commands in your terminal:
+
+```bash
+# Install numpy, pandas, torch, and nltk
+pip install *numpy
+* can be pandas /torch/ nltk
+
+# Install transformers and scikit-learn
+pip install transformers
+pip install scikit-learn
 
 
+## Contact
 
-# Install required Python packages
-pip install numpy pandas torch nltk
-pip install transformers scikit-learn
-
-# Contact
-Your Name - @your_twitter - email@example.com
