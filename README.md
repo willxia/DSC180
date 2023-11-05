@@ -30,5 +30,4 @@ pip install transformers
 pip install scikit-learn
 
 
-## Contact
-
+## Installation
