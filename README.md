@@ -1,5 +1,5 @@
-# DSC180
-# Models for Creditworthiness in the Financial Industry
+
+# DSC180 - Models for Creditworthiness 
 
 Machine Learning for credit score calculation. 
 
