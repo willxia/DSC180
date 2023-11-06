@@ -38,11 +38,11 @@ To begin working with this project, you'll need to set up your environment and o
 
 1. **Clone the Repository and Download Pre-trained Model**
    - Use `git clone` to copy the project notebook and associated files to your local machine.
-   - Ensure that you also download the pre-trained model, which is essential for both training and inference.
+   - You can download the pre-trained model found [here](https://drive.google.com/file/d/1x_mEn9idwcN-vUSGziKpn4v9JexvTZJl/view?usp=sharing). Unzip the files into your cloned repository. Ensure that the binary files associated with the model are under the directory `/bank_transaction_model`.
 2. Running the Notebook
    - If you wish to retrain the model with your data or tweak the training process, execute the entire notebook. This will take you through the entire pipeline from data preprocessing to model training.
 3. Using the Fine-tuned Model for Inference
-   - In case you want to skip the training phase and use the model that has already been fine-tuned, locate the section of the notebook labeled 'Inference'.
+   - In case you want to skip the training phase and use the pre-trained model that you downloaded, first navigate to the **Fine Tuning** section and comment out all three cells. You may then execute the entire notebook.
 
 ### Begin execution from this point to use the model for making predictions or analyzing new data.
 
