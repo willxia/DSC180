@@ -3,6 +3,7 @@ import torch
 import sklearn
 import pandas as pd
 import pickle
+import os
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -15,7 +16,7 @@ while filename != '1' and filename != '2':
 
 
 if filename == '2':
-    filename = "logit_model.sav"
+    filename = "./saved_models/logreg_model.sav"
 
     loaded_model = pickle.load(open(filename, 'rb'))
 
@@ -24,10 +25,12 @@ if filename == '2':
     print(loaded_model.predict(X)[0])
 
 elif filename == '1':
-
+    if not os.path.exists("./saved_models/bert_model"):
+        print("Please download the pretrained BERT model first by running the script in ./saved_models")
+        exit()
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     model = BertForSequenceClassification.from_pretrained(
-        './bank_transaction_model')
+        './saved_models/bert_model')
 
     label_to_id = {
         'EDUCATION': 0,
