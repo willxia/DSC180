@@ -46,7 +46,7 @@ To begin working with this project, you'll need to set up your environment and o
    - Given a memo statement that you input, our models will predict which transaction category it should belong in.
    - Try it out!
 
-### Retraining Models
+## Retraining Models
 
 Note: Depending on your machine and hardware, retraining models may take anywhere from 30 minutes to a few days.
 
