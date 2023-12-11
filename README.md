@@ -40,10 +40,11 @@ To begin working with this project, you'll need to set up your environment and o
 
 1. **Clone the Repository and Download Pre-trained Model**
    - Use `git clone` to copy the project notebook and associated files to your local machine.
-   - Download the pre-trained BERT model by running the `saved_models/download_bert_model.py` script.
+   - Because our pretrained BERT model is too large for GitHub to host, it is hosted on Google Drive instead. You can download the pre-trained BERT model by running the `saved_models/download_bert_model.py` script.
 2. **Demo Script**
-   - Now that you have the pre-trained models saved locally, you can test them out by executing the `prediction_demo.py` script.
+   - Now that you have both our pre-trained BERT model and our TF-IDF Logistic Regression model saved locally, you can test them out by executing the `prediction_demo.py` script.
    - Given a memo statement that you input, our models will predict which transaction category it should belong in.
+   - Try it out!
 
 ### Retraining Models
 
