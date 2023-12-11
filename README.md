@@ -20,7 +20,7 @@ Before you can run the project, you need to install the necessary Python package
 - `transformers`: A library by Hugging Face offering state-of-the-art general-purpose architectures for Natural Language Processing (NLP).
 - `scikit-learn`: A simple and efficient tools for predictive data analysis.
 
-To install these packages, you can use `pip`, which is the package installer for Python. Feel free to install the packages in a virtual environment. Run the following command in your terminal:
+To install these packages, you can use `pip`, which is the package installer for Python. Feel free to do the following in a virtual environment. Run the following command in your terminal:
 
 ```bash
 # Install required packages
@@ -47,14 +47,14 @@ To begin working with this project, you'll need to set up your environment and o
 
 ### Retraining Models
 
-Note: Depending on your machine, retraining models may take anywhere from 30 minutes to days.
+Note: Depending on your machine and hardware, retraining models may take anywhere from 30 minutes to a few days.
 
-1. Dataset and Preprocessing
+1. **Dataset and Preprocessing**
    - In order to retrain our models, you will first need access to the datasets used. To access the datasets, unzip the `data\datasets.zip` file. You may request the password from wxia@ucsd.edu.
    - Next, we will preprocess the data. Executing `preprocessing.py` will create a new parquet file containing our cleaned data with the necessary features.
-2. TF-IDF Logistic Regression Model
+2. **TF-IDF Logistic Regression Model**
    - If you wish to retrain the TF-IDF Logistic Regression model, execute the `feature_and_modeling.py` file.
-3. BERT Classification Model
+3. **BERT Classification Model**
    - If you wish to retrain the BERT model with your data or tweak the training process, execute the entire notebook found in `model_training/bert_classification.ipynb`. This will take you through the entire pipeline from data preprocessing to model training.
 
 
