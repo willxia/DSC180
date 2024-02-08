@@ -1,0 +1,3 @@
+Our fine-tuned BERT model size is too large for Github to host.
+
+Download and extract the model files from https://drive.google.com/file/d/1x_mEn9idwcN-vUSGziKpn4v9JexvTZJl/view into this directory.
