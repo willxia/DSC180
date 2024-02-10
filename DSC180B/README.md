@@ -32,7 +32,7 @@ Ensure you have Python 3 installed on your system.
 
 ### Fetching the Dataset
 
-To access the datasets, unzip the `data\datasets.zip` file. You may request the password from wxia@ucsd.edu.
+To access the datasets, unzip the `data\datasets.zip` file. Please create a Github issue in this repo to request the password.
 
 ## Running the Project
 
