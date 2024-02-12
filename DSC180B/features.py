@@ -11,12 +11,12 @@ def get_data():
     Returns:
         dict: A dictionary containing DataFrames for account, consumer, inflows, and outflows.
     """
-    acct = pd.read_parquet('data/q2_acctDF_final.pqt')
-    cons = pd.read_parquet('data/q2_consDF_final.pqt')
-    inflows = pd.read_parquet('data/q2_inflows_final.pqt')
+    acct = pd.read_parquet('DSC180B/data/q2_acctDF_final.pqt')
+    cons = pd.read_parquet('DSC180B/data/q2_consDF_final.pqt')
+    inflows = pd.read_parquet('DSC180B/data/q2_inflows_final.pqt')
     outflows = pd.concat([
-        pd.read_parquet('data/q2_outflows_1sthalf_final.pqt'),
-        pd.read_parquet('data/q2_outflows_2ndhalf_final.pqt')
+        pd.read_parquet('DSC180B/data/q2_outflows_1sthalf_final.pqt'),
+        pd.read_parquet('DSC180B/data/q2_outflows_2ndhalf_final.pqt')
     ])
     return {
         'acct': acct,
@@ -57,6 +57,9 @@ def get_categorical_features(data):
     """
     acct, cons, inflows, outflows, total = _get_dataframes(data)
 
+    total['datetime'] = pd.to_datetime(total['posted_date'])
+    total['month'] = total['datetime'].apply(lambda d: d.strftime('%Y-%m'))
+    
     by_category = total[['prism_consumer_id', 'category_description', 'month', 'amount']].groupby(['prism_consumer_id', 'category_description', 'month']).sum()
     by_category = by_category.reset_index()
 

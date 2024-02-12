@@ -1,11 +1,10 @@
-#!/usr/bin/env python
 
 import sys
 import json
 import pandas as pd
 
 from features import get_data, get_categorical_features
-from models import train_model, test_model
+from models import train_models, test_models
 from utils import export_dataframe, train_test_val_split
 
 
@@ -32,8 +31,8 @@ def run():
     )
 
     train, test, val = train_test_val_split(features_df)
-    train_model(train)
-    test_model(test)
+    train_models(train)
+    test_models(test)
 
 
 if __name__ == '__main__':

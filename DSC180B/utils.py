@@ -10,7 +10,7 @@ def export_dataframe(df, filename):
         df (DataFrame): DataFrame to be exported.
         filename (str): Name of the CSV file.
     """
-    df.to_csv(os.path.join('data', filename), index=False)
+    df.to_csv(os.path.join('DSC180B', 'data', filename), index=False)
 
 def train_test_val_split(df):
     """
