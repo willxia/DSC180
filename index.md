@@ -17,6 +17,12 @@ Objective: To refine creditworthiness assessment, making it more efficient and a
 
 
 
-# Methods
+# Methods:
 
-# Results and Conclusion
+### Overview:
+
+### Feature selection:
+
+### Models: 
+
+# Results and Conclusion:
