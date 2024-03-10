@@ -1,5 +1,5 @@
 --- 
-layout: default
+layout: temp
 ---
 
 # Background Information: Why is Credit Score Important? 
@@ -25,4 +25,4 @@ Objective: To refine creditworthiness assessment, making it more efficient and a
 
 ### Models: 
 
-# Results and Conclusion: dddd
+# Results and Conclusion:
