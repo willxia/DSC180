@@ -1,5 +1,5 @@
 --- 
-layout: temp
+layout: default
 ---
 
 # Background Information: Why is Credit Score Important? 
