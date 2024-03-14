@@ -14,7 +14,7 @@ Feature Engineering: Incorporating detailed financial indicators such as income,
 Objective: To refine creditworthiness assessment, making it more efficient and accurate.
 
 
-
+![Project Life Cycle](assets/diagram.png)
 
 
 # Methods:
