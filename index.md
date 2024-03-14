@@ -33,7 +33,25 @@ Logistic Regression, XGBClassifier, and SGD were trained on features from balanc
 There are three most important aspects we focus on:
 - Income
 - Consumption
-- Account Balance  
+- Account Balance
+  
+Tracking changes in consumers' income helps gauge their financial stability and well-being. Regular, reliable income suggests lower risk while fluctuating income indicates higher uncertainty. Higher-income generally correlates with better financial health and a lower chance of default.
+
+Analyzing consumption patterns can reveal potential red flags in spending habits, differentiating between essential and discretionary expenses. High discretionary spending relative to income might indicate financial imprudence.
+
+Lastly, a consumer's account balance is a key financial health indicator, reflecting their asset liquidity. Higher balances suggest stability and lower default risk, while lower balances can indicate financial trouble.
+
+| Feature              | Category 
+|---------------------|---------------|
+| Consumer's Net Income | Income         | 
+| Individual's Total Transaction Count       | Consumption      | 
+| Net Balance and Account Type       | Account Balance          | 
+| Consumption on Single Category     | Consumption              | 
+| Monthly Consumption       | Consumption      | 
+| Monthly Outflow/Inflow       |Consumption, Income          | 
+| Average Monthly Inflow/Outflow Per Category       | Consumption, Income          | 
+| Average Percentage Change of Income Over Months | Income |
+| Average Income Per Month | Income |
 
 ### Models: 
 
