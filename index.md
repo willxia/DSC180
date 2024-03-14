@@ -15,6 +15,7 @@ Objective: To refine creditworthiness assessment, making it more efficient and a
 
 ## Datasets
 Our project leverages datasets generously provided by Prism Data, comprising real bank transaction data. Together, these datasets contain approximately 500,000 transaction records, offering a wealth of information on monetary inflows, outflows, and consumer spending habits. Additionally, the datasets encompass details on approximately 3,000 consumers and 5,000 accounts, providing a comprehensive view of their financial behavior. Each consumer has an associated value in the dataset containing whether or not they paid back their loan. This allows us to train models using that as our predictive value. You may find an example inflows dataset below, which contains inflow transactions of consumers.
+
 ![Balance](assets/inflows.png)
 
 
