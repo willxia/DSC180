@@ -54,6 +54,11 @@ Lastly, a consumer's account balance is a key financial health indicator, reflec
 | Average Percentage Change of Income Over Months | Income |
 | Average Income Per Month | Income |
 
+![Balance](assets/Balance.png)
+When randomly selecting 10 customers from each target group, we noticed a consistent trend: Creditworthy customers (green lines) tend to have higher and more fluctuating balances over time, whereas Uncreditworthy Customers (red lines) occasionally exhibit low or even negative balances. This observation inspired us to explore balance-related features for prediction purposes.
+![Avg Spending](assets/AvgSpend.png)
+Additionally, we found that Creditworthy customers typically spend less than Uncreditworthy customers in top recorded categories. This led us to speculate that Creditworthy customers are generally more budget-conscious and avoid unnecessary expenditures. As a result, we are motivated to delve into average computations and other relevant factors.
+
 ### Models: 
 
 # Results:
