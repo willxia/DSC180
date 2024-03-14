@@ -24,10 +24,11 @@ We utilized the categories and income estimate to build a score to predict the r
 
 In this section, we will introduce the methodologies employed in our cash score prediction model. To prepare for the cash score calculation, we need to create relevant features to better understand consumers' financial behavior, which allows us to predict the probability of default. We tested 3 different types of models for this prediction task: 
 1. Logistic Regression
-2. XGBClassifier
+2. XGBClassifier 
 3. SGDClassifier
 
 Logistic Regression, XGBClassifier, and SGD were trained on features from balance, income, and consumption, which are derived from transaction and balance datasets. 
+![Methods](assets/tools.png)
 
 ### Feature selection:
 There are three most important aspects we focus on:
