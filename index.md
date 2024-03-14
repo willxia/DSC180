@@ -6,31 +6,34 @@ layout: default
 
 In the dynamic realm of financial services, determining creditworthiness is essential for risk management, economic stability, and informed lending decisions. Traditionally anchored by the FICO score, the assessment of creditworthiness relies on creditors' periodic reporting, typically spanning one to forty-five days. This time frame, however, introduces a significant shortfall in the traditional scoring system: its inability to promptly encapsulate the nuances of an individual's financial behavior and emerging risks, thereby compromising the decision-making process in lending. 
 
-## How we approach this issue: 
+## Approach
 
 
 Machine Learning (ML) Utilization: Harnessing advanced ML models to devise a "Cash Score," aiming at a real-time reflection of creditworthiness.
 Feature Engineering: Incorporating detailed financial indicators such as income, balance, and spending patterns to enhance prediction accuracy.
 Objective: To refine creditworthiness assessment, making it more efficient and accurate.
 
+## Datasets
+Our project leverages datasets generously provided by Prism Data, comprising real bank transaction data. Together, these datasets contain approximately 500,000 transaction records, offering a wealth of information on monetary inflows, outflows, and consumer spending habits. Additionally, the datasets encompass details on approximately 3,000 consumers and 5,000 accounts, providing a comprehensive view of their financial behavior. Each consumer has an associated value in the dataset containing whether or not they paid back their loan. This allows us to train models using that as our predictive value. You may find an example inflows dataset below, which contains inflow transactions of consumers.
+![Balance](assets/inflows.png)
 
+
+## Project Life Cycle
 ![Project Life Cycle](assets/diagram.png)
 
+# Methods
 
-# Methods:
-
-### Overview:
+### Overview
 We utilized the categories and income estimate to build a score to predict the risk of a consumer not paying his/her bills. To predict the probability of someone defaulting or not, we need to train a model using information such as an individual's income, balance, and categories as the features to make the prediction. 
 
 In this section, we will introduce the methodologies employed in our cash score prediction model. To prepare for the cash score calculation, we need to create relevant features to better understand consumers' financial behavior, which allows us to predict the probability of default. We tested 3 different types of models for this prediction task: 
 1. Logistic Regression
-2. XGBClassifier 
+2. XGBClassifier
 3. SGDClassifier
 
 Logistic Regression, XGBClassifier, and SGD were trained on features from balance, income, and consumption, which are derived from transaction and balance datasets. 
-![Methods](assets/tools.png)
 
-### Feature selection:
+### Feature selection
 There are three most important aspects we focus on:
 - Income
 - Consumption
@@ -55,16 +58,13 @@ Lastly, a consumer's account balance is a key financial health indicator, reflec
 | Average Income Per Month | Income |
 
 ![Balance](assets/Balance.png)
-
 When randomly selecting 10 customers from each target group, we noticed a consistent trend: Creditworthy customers (green lines) tend to have higher and more fluctuating balances over time, whereas Uncreditworthy Customers (red lines) occasionally exhibit low or even negative balances. This observation inspired us to explore balance-related features for prediction purposes.
-
-![Avg Spending](assets/spend.png)
-
+![Avg Spending](assets/AvgSpend.png)
 Additionally, we found that Creditworthy customers typically spend less than Uncreditworthy customers in top recorded categories. This led us to speculate that Creditworthy customers are generally more budget-conscious and avoid unnecessary expenditures. As a result, we are motivated to delve into average computations and other relevant factors.
 
-### Models: 
+### Models
 
-# Results:
+# Results
 
 After rigorous feature selection and hyper-parameter tuning, the XGBClassifier emerged as the top-performing model among Logistic Regression and SGDClassifiers. The performance metrics, namely accuracy and ROC-AUC score, demonstrate its superiority:
 
@@ -82,4 +82,15 @@ Utilizing the XGBClassifier alongside the SHAP Python package provided deeper in
 
 These findings underscore the importance of comprehending consumer credit behavior for making informed lending decisions. By pinpointing critical factors, this study paves the way for more accurate credit scoring, enabling financial institutions to mitigate risks effectively and make smarter lending choices.
 
-# Conclusion:
+# Conclusion
+
+This project aimed to explore various machine learning models to ascertain their efficacy in predicting consumers' credit risk. The XGBClassifier outperformed both the logistic regression and the SGDClassifier by achieving an ROC-AUC score of 0.86 and accuracy of 0.84. It is capable of handling diverse predictive tasks in the financial domain, when the data involves complex, non-linear relationships. 
+
+We also created reason codes that allow consumers to know which features/factors are having the greatest impact on their credit scores. They would be able to see which category makes the final prediction toward the negative direction, which makes them more risky compared to the average consumer. 
+
+The four main impacts and capabilities of our approacch:
+- Reduce the probability of default risk
+- Can be readily applied in various decision-making processes within financial institutions.
+- Greater financial inclusion 
+- Operational efficiency
+
