@@ -33,7 +33,7 @@ In this section, we will introduce the methodologies employed in our cash score 
 3. SGDClassifier
 
 Logistic Regression, XGBClassifier, and SGD were trained on features from balance, income, and consumption, which are derived from transaction and balance datasets. 
-
+![Methods](assets/tools.png)
 ### Feature selection
 There are three most important aspects we focus on:
 - Income
@@ -46,17 +46,18 @@ Analyzing consumption patterns can reveal potential red flags in spending habits
 
 Lastly, a consumer's account balance is a key financial health indicator, reflecting their asset liquidity. Higher balances suggest stability and lower default risk, while lower balances can indicate financial trouble.
 
-| Feature              | Category 
-|---------------------|---------------|
-| Consumer's Net Income | Income         | 
-| Individual's Total Transaction Count       | Consumption      | 
-| Net Balance and Account Type       | Account Balance          | 
-| Consumption on Single Category     | Consumption              | 
-| Monthly Consumption       | Consumption      | 
-| Monthly Outflow/Inflow       |Consumption, Income          | 
-| Average Monthly Inflow/Outflow Per Category       | Consumption, Income          | 
-| Average Percentage Change of Income Over Months | Income |
-| Average Income Per Month | Income |
+| Feature                                           | Category          |
+|---------------------------------------------------|-------------------|
+| Consumer's Net Income                             | Income            |
+| Individual's Total Transaction Count              | Consumption       |
+| Net Balance and Account Type                      | Account Balance   |
+| Consumption on Single Category                    | Consumption       |
+| Monthly Consumption                               | Consumption       |
+| Monthly Outflow/Inflow                            | Consumption, Income |
+| Average Monthly Inflow/Outflow Per Category       | Consumption, Income |
+| Average Percentage Change of Income Over Months   | Income            |
+| Average Income Per Month                          | Income            |
+
 
 ![Balance](assets/Balance.png)
 When randomly selecting 10 customers from each target group, we noticed a consistent trend: Creditworthy customers (green lines) tend to have higher and more fluctuating balances over time, whereas Uncreditworthy Customers (red lines) occasionally exhibit low or even negative balances. This observation inspired us to explore balance-related features for prediction purposes.
@@ -65,9 +66,20 @@ Additionally, we found that Creditworthy customers typically spend less than Unc
 
 ### Models
 
+#### Logistic Regression Model
+- We also focus on the logistic regression model for predicting individuals' cash scores, which captures the probability of someone not paying back their bills. It stands out because Logistic regression is designed specifically for binary outcome variables, making it ideal for predicting whether a consumer will pay (1) or not pay (0) their bills. It estimates probabilities that are bounded between 0 and 1, aligning with the need to assess the risk of a binary event.
+
+#### XGB Classifier Model
+
+XGBClassifier refers to the eXtreme Gradient Boosting Classifier. It is based on gradient boosting, an ensemble technique where new models are created to correct the errors made by existing models. XGBoost uses decision trees as its base learners. There are several strengths of XGBClassifier that meets our need for the credit assessment task. It includes built-in regularization which helps to prevent overfitting. At the same time, we can adjust a variety of tuning parameters that can be optimized for better model performance.
+
+
+#### SGD Classifier Model
+We chose a Stochastic Gradient Descent (SGD) classifier with hinge loss, which functions like a linear Support Vector Machine (SVM), due to its suitability for linearly separable data and resistance to overfitting. The model excels in identifying linear relationships between features and outcomes, crucial for our dataset. It also handles class imbalance well, improving accuracy and demonstrating our strategy to select models that complement our data's specific traits and boost prediction quality.
+
 # Results
 
-After rigorous feature selection and hyper-parameter tuning, the XGBClassifier emerged as the top-performing model among Logistic Regression and SGDClassifiers. The performance metrics, namely accuracy and ROC-AUC score, demonstrate its superiority:
+After rigorous feature selection and hyper-parameter tuning, the XGBClassifier emerged as the top-performing model among Logistic Regression and SGDClassifiers.
 
 | Model               | ROC-AUC Score | Accuracy |
 |---------------------|---------------|----------|
@@ -75,13 +87,13 @@ After rigorous feature selection and hyper-parameter tuning, the XGBClassifier e
 | XGBClassifier       | 0.86          | 0.84     |
 | SGDClassifier       | 0.79          | 0.79     |
 
-XGBoost's exceptional performance can be attributed to its capability to capture non-linear relationships within the dataset, which linear models like Logistic Regression might overlook. The model's accuracy in predicting default risk underscores its potential in refining credit scoring methodologies, thereby enhancing the efficiency of creditworthiness assessments.
+XGBoost's performance can be attributed to its capability to capture non-linear relationships within the dataset, which linear models like Logistic Regression might overlook. The model's accuracy in predicting default risk underscores its potential in finding risky consumers, which is valuable to fin
 
-Utilizing the XGBClassifier alongside the SHAP Python package provided deeper insights into the influential factors driving predictive accuracy. Notably, features such as average credit card payment amount and consumer balances played pivotal roles. Analyzing SHAP values revealed that when consumer balances increase, the prediction tends towards a lower default risk.
+Utilizing the XGBClassifier alongside the SHAP Python package provided deeper insights into the features driving predictive accuracy. Notably, features such as average credit card payment amount and consumer balances played pivotal roles. Analyzing SHAP values revealed that when consumer balances increase, the prediction tends towards a lower default risk.
 
 ![SHAP Values](assets/shap_values.png)
 
-These findings underscore the importance of comprehending consumer credit behavior for making informed lending decisions. By pinpointing critical factors, this study paves the way for more accurate credit scoring, enabling financial institutions to mitigate risks effectively and make smarter lending choices.
+These findings underscore the importance of comprehending consumer credit behavior for making informed lending decisions. With concrete interpretability, these findings pave the way for more accurate credit scoring, enabling financial institutions to mitigate risks effectively and make smarter lending choices.
 
 # Conclusion
 
@@ -89,9 +101,14 @@ This project aimed to explore various machine learning models to ascertain their
 
 We also created reason codes that allow consumers to know which features/factors are having the greatest impact on their credit scores. They would be able to see which category makes the final prediction toward the negative direction, which makes them more risky compared to the average consumer. 
 
-The four main impacts and capabilities of our approacch:
+The four main impacts and capabilities of our approach:
 - Reduce the probability of default risk
 - Can be readily applied in various decision-making processes within financial institutions.
 - Greater financial inclusion 
 - Operational efficiency
 
+However, despite the positive feedback from our model, there are a few limitations in our approach. The efficacy of our model has highly relied on the quality and representativeness of the dataset in question. Without a stable data source, this approach may not accurately predict the risk of defaulting. At the same time, the interpretability of XGBoost is not completely transparent due to the complexity and non-linear nature of how it makes decisions. 
+
+Future research can build upon our findings by adding more relevant features to further enhance predictive accuracy. Any additional information that closely reflects consumer behaviour could improve model performance. 
+
+In conclusion, our results offer a potential implication for the financial industry, presenting opportunities to advance credit risk assessment practices. Financial institutions can achieve more accurate , efficient, and equitable lending processess by leveraging the XGBClassifier. 
