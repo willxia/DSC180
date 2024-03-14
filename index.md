@@ -71,11 +71,11 @@ Additionally, we found that Creditworthy customers typically spend less than Unc
 
 #### XGB Classifier Model
 
-XGBClassifier refers to the eXtreme Gradient Boosting Classifier. It is based on gradient boosting, an ensemble technique where new models are created to correct the errors made by existing models. XGBoost uses decision trees as its base learners. There are several strengths of XGBClassifier that meets our need for the credit assessment task. It includes built-in regularization which helps to prevent overfitting. At the same time, we can adjust a variety of tuning parameters that can be optimized for better model performance.
+- XGBClassifier refers to the eXtreme Gradient Boosting Classifier. It is based on gradient boosting, an ensemble technique where new models are created to correct the errors made by existing models. XGBoost uses decision trees as its base learners. There are several strengths of XGBClassifier that meets our need for the credit assessment task. It includes built-in regularization which helps to prevent overfitting. At the same time, we can adjust a variety of tuning parameters that can be optimized for better model performance.
 
 
 #### SGD Classifier Model
-We chose a Stochastic Gradient Descent (SGD) classifier with hinge loss, which functions like a linear Support Vector Machine (SVM), due to its suitability for linearly separable data and resistance to overfitting. The model excels in identifying linear relationships between features and outcomes, crucial for our dataset. It also handles class imbalance well, improving accuracy and demonstrating our strategy to select models that complement our data's specific traits and boost prediction quality.
+- We chose a Stochastic Gradient Descent (SGD) classifier with hinge loss, which functions like a linear Support Vector Machine (SVM), due to its suitability for linearly separable data and resistance to overfitting. The model excels in identifying linear relationships between features and outcomes, crucial for our dataset. It also handles class imbalance well, improving accuracy and demonstrating our strategy to select models that complement our data's specific traits and boost prediction quality.
 
 # Results
 
