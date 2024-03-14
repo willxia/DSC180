@@ -12,14 +12,14 @@ Our strategy revolves around employing advanced Machine Learning (ML) techniques
 
 Our overarching objective is twofold: to refine the creditworthiness assessment process, making it more efficient and precise. Through our approach, we strive to introduce a scoring system that not only reflects the dynamic nature of financial behavior but also empowers stakeholders with actionable insights for informed decision-making.
 
-## Datasets
+## Project Life Cycle
+![Project Life Cycle](assets/diagram.png)
 
-![Balance](assets/inflows.png)
+## Datasets)
 
 Our project leverages datasets generously provided by Prism Data, comprising real bank transaction data. Together, these datasets contain approximately 500,000 transaction records, offering a wealth of information on monetary inflows, outflows, and consumer spending habits. Additionally, the datasets encompass details on approximately 3,000 consumers and 5,000 accounts, providing a comprehensive view of their financial behavior. Each consumer has an associated value in the dataset containing whether or not they paid back their loan. This allows us to train models using that as our predictive value. You may find an example inflows dataset above, which contains inflow transactions of consumers.
 
-## Project Life Cycle
-![Project Life Cycle](assets/diagram.png)
+![Balance](assets/inflows.png
 
 # Methods
 
