@@ -8,10 +8,9 @@ In the dynamic realm of financial services, determining creditworthiness is esse
 
 ## Approach
 
+Our strategy revolves around employing advanced Machine Learning (ML) techniques to create a novel "Cash Score," which provides a real-time assessment of creditworthiness. To achieve this, we're diving into detailed financial data, including income sources, account balances, and spending patterns. By carefully analyzing these indicators and leveraging sophisticated ML models, we aim to enhance the accuracy of our predictions.
 
-Machine Learning (ML) Utilization: Harnessing advanced ML models to devise a "Cash Score," aiming at a real-time reflection of creditworthiness.
-Feature Engineering: Incorporating detailed financial indicators such as income, balance, and spending patterns to enhance prediction accuracy.
-Objective: To refine creditworthiness assessment, making it more efficient and accurate.
+Our overarching objective is twofold: to refine the creditworthiness assessment process, making it more efficient and precise. Through our approach, we strive to introduce a scoring system that not only reflects the dynamic nature of financial behavior but also empowers stakeholders with actionable insights for informed decision-making.
 
 ## Datasets
 
