@@ -41,17 +41,17 @@ Analyzing consumption patterns can reveal potential red flags in spending habits
 
 Lastly, a consumer's account balance is a key financial health indicator, reflecting their asset liquidity. Higher balances suggest stability and lower default risk, while lower balances can indicate financial trouble.
 
->>| Feature              | Category 
->>|---------------------|---------------|
->>| Consumer's Net Income | Income         | 
->>| Individual's Total Transaction Count       | Consumption      | 
->>| Net Balance and Account Type       | Account Balance          | 
->>| Consumption on Single Category     | Consumption              | 
->>| Monthly Consumption       | Consumption      | 
->>| Monthly Outflow/Inflow       |Consumption, Income          | 
->>| Average Monthly Inflow/Outflow Per Category       | Consumption, Income          | 
->>| Average Percentage Change of Income Over Months | Income |
->>| Average Income Per Month | Income |
+| Feature              | Category 
+|---------------------|---------------|
+| Consumer's Net Income | Income         | 
+| Individual's Total Transaction Count       | Consumption      | 
+| Net Balance and Account Type       | Account Balance          | 
+| Consumption on Single Category     | Consumption              | 
+| Monthly Consumption       | Consumption      | 
+| Monthly Outflow/Inflow       |Consumption, Income          | 
+| Average Monthly Inflow/Outflow Per Category       | Consumption, Income          | 
+| Average Percentage Change of Income Over Months | Income |
+| Average Income Per Month | Income |
 
 ### Models: 
 
